@@ -1,0 +1,395 @@
+PS D:\WEB\mondodbConnections> node .\app.js
+Connected Sucessfully to the server
+Inserted 3 documents into the collections
+PS D:\WEB\mondodbConnections> node .\app.js
+Connected Sucessfully to the server
+Found the following records
+[
+  {
+    _id: 6059aa582784200a88bf30f9,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fa,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fb,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059ab77e813d433982c7850,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab77e813d433982c7851,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf5,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf6,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457482,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aba80220ac398c457483,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457484,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  }
+]
+PS D:\WEB\mondodbConnections> node .\app.js
+D:\WEB\mondodbConnections\node_modules\mongodb\lib\utils.js:106
+      throw err;
+      ^
+
+AssertionError [ERR_ASSERTION]: 3 == 5
+    at D:\WEB\mondodbConnections\app.js:96:12
+    at D:\WEB\mondodbConnections\node_modules\mongodb\lib\utils.js:697:5
+    at executeCallback (D:\WEB\mondodbConnections\node_modules\mongodb\lib\operations\execute_operation.js:65:7)
+    at D:\WEB\mondodbConnections\node_modules\mongodb\lib\operations\insert_many.js:43:7
+    at D:\WEB\mondodbConnections\node_modules\mongodb\lib\operations\bulk_write.js:99:7
+    at D:\WEB\mondodbConnections\node_modules\mongodb\lib\utils.js:383:17
+    at executeCallback (D:\WEB\mondodbConnections\node_modules\mongodb\lib\utils.js:375:9)
+    at handleCallback (D:\WEB\mondodbConnections\node_modules\mongodb\lib\utils.js:102:55)
+    at executeCommands (D:\WEB\mondodbConnections\node_modules\mongodb\lib\bulk\common.js:497:12)
+    at resultHandler (D:\WEB\mondodbConnections\node_modules\mongodb\lib\bulk\common.js:524:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 5,
+  operator: '=='
+}
+PS D:\WEB\mondodbConnections> node .\app.js
+Connected Sucessfully to the server
+Inserted 3 documents into the collections
+Found the following records
+[
+  {
+    _id: 6059aa582784200a88bf30f9,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fa,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fb,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059ab77e813d433982c7850,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab77e813d433982c7851,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf5,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf6,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457482,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aba80220ac398c457483,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457484,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1b35bf0810b10141a64,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a65,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a66,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1b35bf0810b10141a67,
+    name: 'Banana',
+    score: 7,
+    review: 'Bestt in taste'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a68,
+    name: 'Orange',
+    score: 8,
+    review: 'Pretty Sour'
+  },
+  {
+    _id: 6059b1c88647e029cc267d88,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1c88647e029cc267d89,
+    name: 'Banana',
+    score: 7,
+    review: 'Bestt in taste'
+  },
+  {
+    _id: 6059b1c88647e029cc267d8a,
+    name: 'Orange',
+    score: 8,
+    review: 'Pretty Sour'
+  }
+]
+PS D:\WEB\mondodbConnections> node .\app.js
+Connected Sucessfully to the server
+Inserted 3 documents into the collections
+Found the following records
+[
+  {
+    _id: 6059aa582784200a88bf30f9,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fa,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aa582784200a88bf30fb,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059ab77e813d433982c7850,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab77e813d433982c7851,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf5,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059ab91d3000025e8ab1bf6,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457482,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059aba80220ac398c457483,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059aba80220ac398c457484,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1b35bf0810b10141a64,
+    name: 'PineApple',
+    score: 9,
+    review: 'Awesome!'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a65,
+    name: 'Apple',
+    score: 8,
+    review: 'Gorgeous!'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a66,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1b35bf0810b10141a67,
+    name: 'Banana',
+    score: 7,
+    review: 'Bestt in taste'
+  },
+  {
+    _id: 6059b1b35bf0810b10141a68,
+    name: 'Orange',
+    score: 8,
+    review: 'Pretty Sour'
+  },
+  {
+    _id: 6059b1c88647e029cc267d88,
+    name: 'Pomegranate',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b1c88647e029cc267d89,
+    name: 'Banana',
+    score: 7,
+    review: 'Bestt in taste'
+  },
+  {
+    _id: 6059b1c88647e029cc267d8a,
+    name: 'Orange',
+    score: 8,
+    review: 'Pretty Sour'
+  },
+  {
+    _id: 6059b2bdb6992332e05ff292,
+    name: 'Grape',
+    score: 9,
+    review: "Taste's good!"
+  },
+  {
+    _id: 6059b2bdb6992332e05ff293,
+    name: 'WaterMelon',
+    score: 7,
+    review: 'Sweet in taste'
+  },
+  {
+    _id: 6059b2bdb6992332e05ff294,
+    name: 'Berries',
+    score: 8,
+    review: 'Pretty Sour'
+  }
+]
+PS D:\WEB\mondodbConnections> mongo
+MongoDB shell version v4.4.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("877d2897-f295-4f82-b021-6fab60502eec") }
+MongoDB server version: 4.4.4
+---
+The server generated these startup warnings when booting:
+        2021-03-22T17:07:05.288+05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs     
+admin   0.000GB
+areeb   0.000GB
+config  0.000GB
+fruits  0.000GB
+local   0.000GB
+> use fruits
+switched to db fruits
+> db.fruits.find()
+{ "_id" : ObjectId("6059aa582784200a88bf30f9"), "name" : "PineApple", "score" : 9, "review" : "Awesome!" }       
+{ "_id" : ObjectId("6059aa582784200a88bf30fa"), "name" : "Apple", "score" : 8, "review" : "Gorgeous!" }
+{ "_id" : ObjectId("6059aa582784200a88bf30fb"), "name" : "Pomegranate", "score" : 9, "review" : "Taste's good!" }
+{ "_id" : ObjectId("6059ab77e813d433982c7850"), "name" : "PineApple", "score" : 9, "review" : "Awesome!" }       
+{ "_id" : ObjectId("6059ab77e813d433982c7851"), "name" : "Apple", "score" : 8, "review" : "Gorgeous!" }
+{ "_id" : ObjectId("6059ab91d3000025e8ab1bf5"), "name" : "PineApple", "score" : 9, "review" : "Awesome!" }       
+{ "_id" : ObjectId("6059ab91d3000025e8ab1bf6"), "name" : "Apple", "score" : 8, "review" : "Gorgeous!" }
+{ "_id" : ObjectId("6059aba80220ac398c457482"), "name" : "PineApple", "score" : 9, "review" : "Awesome!" }       
+{ "_id" : ObjectId("6059aba80220ac398c457483"), "name" : "Apple", "score" : 8, "review" : "Gorgeous!" }
+{ "_id" : ObjectId("6059aba80220ac398c457484"), "name" : "Pomegranate", "score" : 9, "review" : "Taste's good!" }
+{ "_id" : ObjectId("6059b1b35bf0810b10141a64"), "name" : "PineApple", "score" : 9, "review" : "Awesome!" }
+{ "_id" : ObjectId("6059b1b35bf0810b10141a65"), "name" : "Apple", "score" : 8, "review" : "Gorgeous!" }
+{ "_id" : ObjectId("6059b1b35bf0810b10141a66"), "name" : "Pomegranate", "score" : 9, "review" : "Taste's good!" }
+{ "_id" : ObjectId("6059b1b35bf0810b10141a67"), "name" : "Banana", "score" : 7, "review" : "Bestt in taste" }
+{ "_id" : ObjectId("6059b1b35bf0810b10141a68"), "name" : "Orange", "score" : 8, "review" : "Pretty Sour" }
+{ "_id" : ObjectId("6059b1c88647e029cc267d88"), "name" : "Pomegranate", "score" : 9, "review" : "Taste's good!" }
+{ "_id" : ObjectId("6059b1c88647e029cc267d89"), "name" : "Banana", "score" : 7, "review" : "Bestt in taste" }
+{ "_id" : ObjectId("6059b1c88647e029cc267d8a"), "name" : "Orange", "score" : 8, "review" : "Pretty Sour" }
+{ "_id" : ObjectId("6059b2bdb6992332e05ff292"), "name" : "Grape", "score" : 9, "review" : "Taste's good!" }
+{ "_id" : ObjectId("6059b2bdb6992332e05ff293"), "name" : "WaterMelon", "score" : 7, "review" : "Sweet in taste" }
+Type "it" for more
+>
+
+
+
+
+
+
+
+
