@@ -1,0 +1,158 @@
+
+FETCHING DATA 
+PS D:\mongoDb Native Driver Node.js> node .\app.js
+[
+  {
+    _id: 605f11b18a38bb1a7c59f0cc,
+    name: 'Seher',
+    color: 'brown',
+    __v: 0
+  },
+  {
+    _id: 605f11b18a38bb1a7c59f0cd,
+    name: 'Maanu',
+    color: 'brown& white',
+    __v: 0
+  },
+  {
+    _id: 605f11b18a38bb1a7c59f0ce,
+    name: 'kelly',
+    color: 'White',
+    __v: 0
+  },
+  {
+    _id: 605f11b18a38bb1a7c59f0cf,
+    name: 'Cutie',
+    color: 'Black',
+    __v: 0
+  }
+]
+
+
+
+PS D:\mongoDb Native Driver Node.js> node .\app.js
+Seherbrown
+Maanubrown& white
+kellyWhite
+CutieBlack
+
+
+
+
+PS D:\mongoDb Native Driver Node.js> node .\app.js
+Seher of brown color
+Maanu of brown& white color
+kelly of White color
+Cutie of Black color
+
+
+
+DATA VALIDATION (LIMIT ON THE AGE FIELD OF OBJECT)
+
+PS D:\mongoDb Native Driver Node.js> node .\app.js
+(node:6024) UnhandledPromiseRejectionWarning: ValidationError: Engineer validation failed: age: Path `age` (5) is less than minimum allowed value (10).
+    at model.Document.invalidate (D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\document.js:2523:17
+    at D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6024) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:6024) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process 
+with a non-zero exit code.
+
+
+
+
+
+
+AFTER VALIIDATION OBJECT INSERTS EVEN NAME ENTRY IS NOT PRESENT (BUG) 
+
+const Engg = mongoose.model('Engineer', { 
+  name: String,
+  gender: String,
+  age: {
+    type: Number,
+    min: 10,
+    max: 45
+  },
+  occupation: String,
+  nationality: String
+
+ });
+
+ const areeb = new Engg({gender: "male", age:20 , occupation: "software developer", nationality: "Pakistani"});
+
+> use CIS
+switched to db CIS
+> show collections
+cats
+engineers
+> db.engineers.find()
+{ "_id" : ObjectId("605ee867a577af0438b203c5"), "__v" : 0 }
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca76"), "name" : "Areeb", "gender" : "male", "age" : 20, "occupation" : "software developer", "nationality" : "Pakistani", "__v" : 0 }   
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca77"), "name" : "Anas", "gender" : "male", "age" : 19, "occupation" : "Game developer", "nationality" : "Pakistani", "__v" : 0 }        
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca78"), "name" : "Osama", "gender" : "male", "age" : 30, "occupation" : "IOS developer", "nationality" : "Pakistani", "__v" : 0 }        
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca79"), "name" : "Ali", "gender" : "male", "age" : 24, "occupation" : "Android developer", "nationality" : "Pakistani", "__v" : 0 }      
+{ "_id" : ObjectId("605f22404b096c04780bc4ad"), "gender" : "male", "age" : 20, "occupation" : "software developer", "nationality" : "Pakistani", "__v" : 0 }
+{ "_id" : ObjectId("605f22eb11ed8d26546f98de"), "gender" : "male", "age" : 20, "occupation" : "software developer", "nationality" : "Pakistani", "__v" : 0 }
+>
+
+
+
+
+
+
+
+NAME FIELD REQUIRED VALIDATION
+
+const Engg = mongoose.model('Engineer', { 
+  name: {
+    type: String,
+    required: [true, "NAME VALIDATION MISSING!  Please cheak your entry, and try again. "]
+  },
+  gender: String,
+  age: {
+    type: Number,
+    min: 10,
+    max: 45
+  },
+  occupation: String,
+  nationality: String
+
+ });
+ const areeb = new Engg({gender: "male", age:20 , occupation: "software developer", nationality: "Pakistani"});
+
+PS D:\mongoDb Native Driver Node.js> node .\app.js
+(node:11704) UnhandledPromiseRejectionWarning: ValidationError: Engineer validation failed: name: NAME VALIDATION MISSING!  Please cheak your entry, and try again. 
+    at model.Document.invalidate (D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\document.js:2703:32)
+    at D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\document.js:2523:17
+    at D:\mongoDb Native Driver Node.js\node_modules\mongoose\lib\schematype.js:1254:9
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11704) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:11704) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+
+
+
+
+
+
+DELETE MANY ENTRIES AS PER QUERY
+
+Engg.deleteMany({age: 20}, function(err){
+  if (err){
+    console.log(err);
+  } else {
+    console.log("Same Age Deleted Sucessfully!");
+  }
+})
+
+> use CIS
+switched to db CIS
+> db.engineers.find()
+{ "_id" : ObjectId("605ee867a577af0438b203c5"), "__v" : 0 }
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca77"), "name" : "Anas", "gender" : "male", "age" : 19, "occupation" : "Game developer", "nationality" : "Pakistani", "__v" : 0 }        
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca78"), "name" : "Osama", "gender" : "male", "age" : 30, "occupation" : "IOS developer", "nationality" : "Pakistani", "__v" : 0 }        
+{ "_id" : ObjectId("605f0e7740403e1f04b4ca79"), "name" : "Ali", "gender" : "male", "age" : 24, "occupation" : "Android developer", "nationality" : "Pakistani", "__v" : 0 }      
+>

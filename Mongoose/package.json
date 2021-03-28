@@ -1,0 +1,17 @@
+{
+  "name": "mondodbconnections",
+  "version": "1.0.0",
+  "description": "We're establisihing the connections between mongo database and our Node.js server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arbii_xD",
+  "license": "ISC",
+  "dependencies": {
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.2",
+    "nodemon": "^2.0.7"
+  }
+}
